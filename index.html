@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layan Bassout | Portfolyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="yeni.css" />
+  <script>
+    // tema sayfa çizilmeden önce uygulansın
+    try {
+      var t = localStorage.getItem("theme-yeni");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ÜST ŞERİT -->
+  <nav class="topbar">
+    <span class="mono">LB/26</span>
+    <ul class="nav-links">
+      <li><a href="#deneyim" data-i18n="nav.exp">Deneyim</a></li>
+      <li><a href="#projeler" data-i18n="nav.proj">Projeler</a></li>
+      <li><a href="#diller" data-i18n="nav.lang">Diller</a></li>
+      <li><a href="#sertifikalar" data-i18n="nav.cert">Sertifikalar</a></li>
+      <li><a href="#iletisim" data-i18n="nav.contact">İletişim</a></li>
+    </ul>
+    <div class="tools">
+      <div class="lang-switch" role="group" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" id="theme-toggle" class="mono" aria-label="Tema">◐</button>
+    </div>
+  </nav>
+
+  <!-- KAPAK -->
+  <header class="cover">
+    <div class="cover-meta mono">
+      <span data-i18n="meta.issue">Sayı 04 · Güz 2026</span>
+      <span data-i18n="meta.place">Elazığ, Türkiye</span>
+      <span data-i18n="meta.field">Yazılım &amp; Yapay Zekâ</span>
+    </div>
+
+    <h1 class="cover-title">
+      <span class="line">Layan</span>
+      <span class="line indent"><em>Bassout</em></span>
+    </h1>
+
+    <div class="cover-grid">
+      <div class="cover-intro">
+        <p class="lead" data-i18n="cover.lead">Yazılım Mühendisliği 4. sınıf öğrencisi. Modelleri eğitiyor, ajanları konuşturuyor, fikirleri sahneye taşıyorum.</p>
+        <blockquote>
+          <p data-i18n="cover.quote">“Zekâ, değişime uyum sağlama yeteneğidir.”</p>
+          <cite data-i18n="cover.cite">— Stephen Hawking</cite>
+        </blockquote>
+        <a href="#deneyim" class="btn"><span data-i18n="cover.btn">Hikâyeyi oku</span> <span class="arrow">↓</span></a>
+      </div>
+
+      <figure class="cover-photo">
+        <div class="tape"></div>
+        <img src="images/arge-foto.jpeg" alt="Layan Bassout" />
+        <figcaption class="mono" data-i18n="cover.fig">Fig. 1 — Kod yazmadığı nadir anlardan biri</figcaption>
+        <div class="sticker"><span>AI<br/>Engineer</span></div>
+      </figure>
+    </div>
+  </header>
+
+  <!-- KAYAN BANT -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Python</span><i>✺</i><span>YOLOv11</span><i>✺</i><span>LLM &amp; RAG</span><i>✺</i><span>CrewAI</span><i>✺</i><span>React</span><i>✺</i><span>FastAPI</span><i>✺</i><span>MongoDB</span><i>✺</i><span>Java</span><i>✺</i><span data-i18n="chip.cv">Bilgisayarlı Görü</span><i>✺</i><span>NLP</span><i>✺</i>
+      <span>Python</span><i>✺</i><span>YOLOv11</span><i>✺</i><span>LLM &amp; RAG</span><i>✺</i><span>CrewAI</span><i>✺</i><span>React</span><i>✺</i><span>FastAPI</span><i>✺</i><span>MongoDB</span><i>✺</i><span>Java</span><i>✺</i><span data-i18n="chip.cv">Bilgisayarlı Görü</span><i>✺</i><span>NLP</span><i>✺</i>
+    </div>
+  </div>
+
+  <!-- RAKAMLAR -->
+  <section class="stats">
+    <div class="stat reveal"><b data-count="91.33" data-decimals="2">0</b><span data-i18n="stat.1">TEKNOFEST ön tasarım raporu puanı</span></div>
+    <div class="stat reveal"><b>17<small>/179</small></b><span data-i18n="stat.2">Gen-U Demo Day — finale kalan takımlar arasında</span></div>
+    <div class="stat reveal"><b>~<span data-count="25">0</span><span data-i18n="stat.unit">sn</span></b><span data-i18n="stat.3">5 ajanlı fikir analizinin süresi</span></div>
+    <div class="stat reveal"><b data-count="3">0</b><span data-i18n="stat.4">dil: Arapça, Türkçe, İngilizce</span></div>
+  </section>
+
+  <main>
+
+    <!-- BÖLÜM I: DENEYİM -->
+    <section id="deneyim" class="chapter">
+      <header class="chapter-head">
+        <span class="chapter-no">I</span>
+        <h2 data-i18n="ch.1">Deneyim<em>, yani yol boyunca biriktirdiklerim</em></h2>
+      </header>
+
+      <article class="entry reveal">
+        <div class="entry-num">01</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.work">İş</span> <span data-i18n="date.tahweel">Şubat – Eylül 2026</span></p>
+          <h3>Tahweel</h3>
+          <p class="entry-role" data-i18n="tahweel.role">Yapay Zekâ Mühendisi · Uzaktan</p>
+          <p class="entry-desc" data-i18n="tahweel.desc">Fintech hizmetlerine yapay zekâ özellikleri entegre ettim ve şirketin İngilizce/Arapça yapay zekâ asistanı “Tahweel Boy”un geliştirilmesine liderlik ettim; kural mimarisinden bilgi tabanına kadar uçtan uca sorumluluk aldım.</p>
+          <ul class="chips"><li>LLM</li><li>NLP</li><li data-i18n="chip.prompt">Prompt Mühendisliği</li><li data-i18n="chip.enar">İngilizce / Arapça</li></ul>
+        </div>
+        <figure class="polaroid wide"><img src="images/tahweel.jpg" alt="Tahweel AI Engineer – Layan Bassout" /></figure>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">02</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.intern">Staj</span> <span data-i18n="date.summer26">Temmuz – Ağustos 2026</span></p>
+          <h3><a href="https://www.prodrom.com/" target="_blank" rel="noopener">Prodrom ICT Solutions ↗</a></h3>
+          <p class="entry-role" data-i18n="prodrom.role">Yapay Zekâ Stajyeri · Fırat Teknokent</p>
+          <p class="entry-desc" data-i18n="prodrom.desc">CVE güvenlik açığı kayıtlarını LLM ve RAG ile özetleyen, sınıflandıran ve önceliklendiren bir siber güvenlik asistanı geliştirdim. Ayrıca 5 uzman CrewAI ajanıyla çalışan fikir doğrulama platformu <strong>TSI – Test Your Idea</strong>’yı geliştirdim; paralel çalıştırmayla analiz süresini ~25 saniyeye indirdim.</p>
+          <ul class="chips"><li>LLM</li><li>RAG</li><li>CrewAI</li><li>asyncio</li><li>Chart.js</li></ul>
+        </div>
+        <div class="photo-stack">
+          <figure class="polaroid"><img src="images/prodrom-teknokent.jpg" alt="Fırat Teknokent" /></figure>
+          <figure class="polaroid"><img src="images/prodrom-calisma.jpg" alt="Prodrom" /></figure>
+        </div>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">03</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.comp">Yarışma</span> <span>2026</span></p>
+          <h3 data-i18n="tekno.title">TEKNOFEST 5G &amp; Yapay Zekâ ile Akıllı Yol Güvenliği</h3>
+          <p class="entry-role" data-i18n="tekno.role">FifthWave Takımı · Bilgisayarlı Görü</p>
+          <p class="entry-desc" data-i18n="tekno.desc">Videodan sürücü davranışlarını (telefon kullanımı, sigara, emniyet kemeri) tespit eden modülü YOLOv11 ile geliştirdim; veri toplama, temizleme ve artırma süreçlerini üstlendim. Ön tasarım raporumuz <strong>91,33</strong> puan aldı.</p>
+          <ul class="chips"><li>Python</li><li>YOLOv11</li><li data-i18n="chip.cv">Bilgisayarlı Görü</li><li>5G</li></ul>
+        </div>
+        <div class="photo-stack">
+          <figure class="polaroid"><img src="images/teknofest-fifthwave.jpg" alt="FifthWave · TEKNOFEST" /></figure>
+          <figure class="polaroid"><img src="images/teknofest-puan.jpg" alt="91,33" class="contain" /></figure>
+        </div>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">04</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.finalist">Finalist</span> <span data-i18n="date.apr26">Nisan 2026</span></p>
+          <h3 data-i18n="idea.title">PropTech &amp; İleri Veri Analitiği Ideathonu</h3>
+          <p class="entry-role" data-i18n="idea.role">TriMind Takımı · Emlak Konut GYO, Ankara</p>
+          <p class="entry-desc" data-i18n="idea.desc">Gayrimenkulde yapay zekâ destekli çözümler üzerine 12 saatlik yoğun bir maraton. Ankara finalinde projemizi jüriye sunduk ve bir fikrin gerçek kullanıcıyla test edilmeden tamamlanmadığını öğrendik.</p>
+          <ul class="chips"><li data-i18n="chip.ai">Yapay Zekâ</li><li>PropTech</li><li data-i18n="chip.data">Veri Analitiği</li></ul>
+        </div>
+        <div class="photo-stack">
+          <figure class="polaroid"><img src="images/ideathon-grup.jpg" alt="Emlak Konut Ideathon" /></figure>
+          <figure class="polaroid"><img src="images/ideathon-trimind.jpg" alt="TriMind" style="object-position: 75% center;" /></figure>
+        </div>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">05</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.intern">Staj</span> <span data-i18n="date.summer25">Temmuz – Ağustos 2025</span></p>
+          <h3>AppBerrySoft</h3>
+          <p class="entry-role" data-i18n="abs.role">Yazılım Mühendisliği Stajyeri · EV Charger Projesi</p>
+          <p class="entry-desc" data-i18n="abs.desc">Elektrikli araç şarj projesinde React, Node.js ve MongoDB ile hem ön yüz hem arka uç geliştirdim. Gerçek bir projede sorumluluk alarak kod optimizasyonu ve görev yönetimi üzerine pratik kazandım.</p>
+          <ul class="chips"><li>React</li><li>Node.js</li><li>MongoDB</li></ul>
+        </div>
+        <figure class="polaroid"><img src="images/appberrysoft.jpg" alt="AppBerrySoft" /></figure>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">06</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.project">Proje</span> <span>2025</span></p>
+          <h3 data-i18n="tubitak.title">Yapay Zekâ Destekli Deprem Yardım Platformu</h3>
+          <p class="entry-role" data-i18n="tubitak.role">TÜBİTAK 2209-A · Proje Lideri</p>
+          <p class="entry-desc" data-i18n="tubitak.desc">Deprem sonrası yardım çalışmalarını koordine eden, yapay zekâ ve makine öğrenmesi tabanlı bir web platformu. Projeyi öneri aşamasından teslimata kadar yönettim.</p>
+          <ul class="chips"><li>React</li><li>MongoDB</li><li data-i18n="chip.ml">Makine Öğrenmesi</li></ul>
+        </div>
+        <figure class="polaroid"><img src="images/tubitak.jpg" alt="TÜBİTAK 2209-A" /></figure>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">07</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.edu">Eğitim</span> <span data-i18n="date.dv">Mayıs – Haziran 2025</span></p>
+          <h3 data-i18n="dv.title">Dijital Vizyon: Yapay Zekâ ve Dijital Dönüşüm</h3>
+          <p class="entry-role" data-i18n="dv.role">Fırat Üniversitesi YBS Topluluğu · ÜNİDES</p>
+          <p class="entry-desc" data-i18n="dv.desc">5 hafta, 40 saat: yapay zekâ temelleri, veri analitiği ve iş zekâsı, finans ve muhasebede yapay zekâ, dijital dönüşüm ve RPA. Program, uygulamalı bir hackathon ile tamamlandı.</p>
+          <ul class="chips"><li>Python</li><li data-i18n="chip.data">Veri Analitiği</li><li>RPA</li><li>Hackathon</li></ul>
+        </div>
+        <div class="photo-stack">
+          <figure class="polaroid"><img src="images/dijital-vizyon-calisma.jpg" alt="Dijital Vizyon" /></figure>
+          <figure class="polaroid"><img src="images/dijital-vizyon-sertifika.jpg" alt="Dijital Vizyon" /></figure>
+        </div>
+      </article>
+
+      <!-- ALINTI ARASI -->
+      <aside class="pullquote reveal">
+        <p data-i18n="pq.text">“179 başvuru arasından ilk 17 takıma girdik.”</p>
+        <span class="mono" data-i18n="pq.src">— Gen-U Demo Day, Kasım 2024</span>
+      </aside>
+
+      <article class="entry reveal">
+        <div class="entry-num">08</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.finalist">Finalist</span> <span data-i18n="date.nov24">Kasım 2024</span></p>
+          <h3 data-i18n="genu.title">Genç Girişimciler Fikir Maratonu &amp; Gen-U Demo Day</h3>
+          <p class="entry-role" data-i18n="genu.role">Takım Kaptanı · Habitat Derneği &amp; UNICEF Türkiye</p>
+          <p class="entry-desc" data-i18n="genu.desc">Aylar süren eğitim ve çalışma serüveninin sonunda Mindigo projemizle finale kaldık. Ankara’da iki gün boyunca projemizi jüriye sunduk, mentorlarla birebir çalışarak fikrimizi geliştirdik.</p>
+          <ul class="chips"><li data-i18n="chip.entre">Girişimcilik</li><li data-i18n="chip.captain">Takım Kaptanlığı</li><li data-i18n="chip.pitch">Sunum</li></ul>
+        </div>
+        <div class="photo-stack">
+          <figure class="polaroid"><img src="images/demoday-sahne.jpg" alt="Gen-U Demo Day" /></figure>
+          <figure class="polaroid"><img src="images/demoday-sunum.jpg" alt="Mindigo" /></figure>
+        </div>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">09</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.vol">Gönüllü</span> <span data-i18n="date.now">Halen</span></p>
+          <h3 data-i18n="unv.title">Birleşmiş Milletler Gönüllüleri (UNV)</h3>
+          <p class="entry-role" data-i18n="unv.role">Online Gönüllü</p>
+          <p class="entry-desc" data-i18n="unv.desc">Yapay zekâ ve teknoloji alanındaki bilgimi sosyal etki yaratan projelere katmayı hedefliyorum.</p>
+          <ul class="chips"><li data-i18n="chip.vol">Gönüllülük</li><li data-i18n="chip.impact">Sosyal Etki</li></ul>
+        </div>
+        <figure class="polaroid logo"><img src="images/unv-logo.png" alt="UN Volunteers" /></figure>
+      </article>
+
+      <article class="entry reveal">
+        <div class="entry-num">10</div>
+        <div class="entry-text">
+          <p class="entry-meta mono"><span class="tag" data-i18n="tag.uni">Okul</span> <span>2023 – 2027</span></p>
+          <h3 data-i18n="firat.title">Fırat Üniversitesi</h3>
+          <p class="entry-role" data-i18n="firat.role">Mühendislik Fakültesi · Yazılım Mühendisliği · 4. Sınıf</p>
+          <p class="entry-desc" data-i18n="firat.desc">Kod yazmayı derslerde öğrendim, üretmeyi ise hocalarımla birlikte imza attığım projelerde.</p>
+          <ul class="chips"><li>C</li><li>C++</li><li>Java</li><li>Python</li><li>PHP</li><li>SQL</li></ul>
+        </div>
+        <figure class="polaroid"><img src="images/firat-uni.jpeg" alt="Fırat Üniversitesi" style="object-position: center 35%;" /></figure>
+      </article>
+    </section>
+
+    <!-- BÖLÜM II: PROJELER -->
+    <section id="projeler" class="chapter">
+      <header class="chapter-head">
+        <span class="chapter-no">II</span>
+        <h2 data-i18n="ch.2">Projeler<em>, derslerden çıkıp çalışan şeyler</em></h2>
+      </header>
+
+      <div class="cards">
+        <article class="card big reveal">
+          <span class="card-no mono">P.01</span>
+          <h3 data-i18n="p1.title">Kripto Para Fiyat Tahmin Platformu</h3>
+          <p data-i18n="p1.desc">XGBoost, LightGBM ve Random Forest topluluk modellerinin tahmin sonuçlarını görselleştiren bir web platformu. Backend’i FastAPI, arayüzü React ve TypeScript ile geliştirdim.</p>
+          <ul class="chips"><li>Python</li><li>XGBoost</li><li>LightGBM</li><li>FastAPI</li><li>React</li><li>TypeScript</li></ul>
+        </article>
+        <article class="card reveal">
+          <span class="card-no mono">P.02</span>
+          <h3 data-i18n="p2.title">Kütüphane Yönetim Sistemi</h3>
+          <p data-i18n="p2.desc">Nesne yönelimli programlama ile geliştirilmiş kütüphane yönetim sistemi.</p>
+          <ul class="chips"><li>Java</li><li>OOP</li></ul>
+          <a class="card-link" href="https://github.com/leya1133/java-library-system" target="_blank" rel="noopener" data-i18n="card.code">Kodu gör ↗</a>
+        </article>
+        <article class="card reveal">
+          <span class="card-no mono">P.03</span>
+          <h3 data-i18n="p3.title">Okul Giriş Sistemi</h3>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>PHP</li><li>SQL</li></ul>
+          <a class="card-link" href="https://github.com/leya1133/school-entrance-system" target="_blank" rel="noopener" data-i18n="card.code">Kodu gör ↗</a>
+        </article>
+        <article class="card reveal">
+          <span class="card-no mono">P.04</span>
+          <h3 data-i18n="p4.title">Elektrikli Araç Şarj Yönetim Sistemi</h3>
+          <ul class="chips"><li>React</li></ul>
+        </article>
+        <article class="card reveal">
+          <span class="card-no mono">P.05</span>
+          <h3 data-i18n="p5.title">Akıllı Erişim Sistemi</h3>
+          <ul class="chips"><li>Java</li></ul>
+        </article>
+        <a class="card github reveal" href="https://github.com/leya1133" target="_blank" rel="noopener">
+          <span class="card-no mono">P.∞</span>
+          <h3 data-i18n="card.github">Tüm projeler GitHub’da</h3>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- BÖLÜM III: DİLLER -->
+    <section id="diller" class="chapter">
+      <header class="chapter-head">
+        <span class="chapter-no">III</span>
+        <h2 data-i18n="ch.3">Diller<em>, üç dünya arasında</em></h2>
+      </header>
+
+      <div class="langs">
+        <div class="lang reveal" style="--lvl: 100%">
+          <span class="lang-native" lang="ar">العربية</span>
+          <h3 data-i18n="lang.ar">Arapça</h3>
+          <span class="mono" data-i18n="lvl.native">Ana dil</span>
+          <div class="meter"><span></span></div>
+        </div>
+        <div class="lang reveal" style="--lvl: 92%">
+          <span class="lang-native" lang="tr">Türkçe</span>
+          <h3 data-i18n="lang.tr">Türkçe</h3>
+          <span class="mono" data-i18n="lvl.c2">C2 · İleri</span>
+          <div class="meter"><span></span></div>
+        </div>
+        <div class="lang reveal" style="--lvl: 68%">
+          <span class="lang-native" lang="en">English</span>
+          <h3 data-i18n="lang.en">İngilizce</h3>
+          <span class="mono" data-i18n="lvl.b2">B2 · Orta-üstü</span>
+          <div class="meter"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BÖLÜM IV: SERTİFİKALAR -->
+    <section id="sertifikalar" class="chapter">
+      <header class="chapter-head">
+        <span class="chapter-no">IV</span>
+        <h2 data-i18n="ch.4">Sertifikalar<em>, kayıt altına alınanlar</em></h2>
+      </header>
+
+      <ol class="ledger">
+        <li class="reveal">
+          <span class="mono">2025 – 2026</span>
+          <div><h3 data-i18n="c1.title">Veri Analizi Okulu</h3><p data-i18n="c1.detail">“Yapay Zekâ ve Makine Öğrenmesi” modülü</p></div>
+          <span class="issuer" data-i18n="c1.issuer">YÖK · ODTÜ · İTÜ · Boğaziçi</span>
+        </li>
+        <li class="reveal">
+          <span class="mono">2026</span>
+          <div><h3>Start Writing Prompts like a Pro</h3></div>
+          <span class="issuer">Google · Coursera</span>
+        </li>
+        <li class="reveal">
+          <span class="mono" data-i18n="date.jan26">Ocak 2026</span>
+          <div><h3 data-i18n="c3.title">Proje Yazım Eğitimi</h3><p><span data-i18n="c3.detail">Fikir üretme, geliştirme ve proje yazım araçları</span> · <a href="images/sertifika-proje-yazim.jpg" target="_blank" rel="noopener" data-i18n="cert.view">Belgeyi gör ↗</a></p></div>
+          <span class="issuer">Öğrenci Kariyeri</span>
+        </li>
+        <li class="reveal">
+          <span class="mono">2025</span>
+          <div><h3>Python for Data Science and AI</h3></div>
+          <span class="issuer">IBM · Coursera</span>
+        </li>
+        <li class="reveal">
+          <span class="mono">2025</span>
+          <div><h3 data-i18n="c5.title">Python Programlama Dili</h3></div>
+          <span class="issuer">BTK Akademi</span>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- İLETİŞİM -->
+  <footer id="iletisim" class="outro">
+    <p class="mono" data-i18n="outro.kicker">Son söz</p>
+    <h2 data-i18n="outro.title">Bir merhaba<br/><em>yeter.</em></h2>
+    <a class="mail" href="mailto:besudleyyen@gmail.com">besudleyyen@gmail.com</a>
+    <div class="outro-links">
+      <a href="tel:+905226141309">+90 522 614 13 09</a>
+      <a href="https://www.linkedin.com/in/layan-bassout-6055172a5/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/leya1133" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <div class="colophon mono">
+      <span>© 2026 Layan Bassout</span>
+      <a href="klasik.html" data-i18n="outro.classic">Klasik tasarıma dön →</a>
+    </div>
+  </footer>
+
+  <script src="yeni.js"></script>
+</body>
+</html>

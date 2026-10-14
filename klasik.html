@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layan Bassout | Portfolyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // tema sayfa çizilmeden önce uygulansın (açılışta yanıp sönmesin)
+    try {
+      var t = localStorage.getItem("theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- DİL / TEMA DÜĞMELERİ -->
+  <div class="toolbar">
+    <button type="button" id="lang-toggle" aria-label="Switch to English">EN</button>
+    <button type="button" id="theme-toggle" aria-label="Açık temaya geç">☀️</button>
+  </div>
+
+  <!-- ÜST BÖLÜM -->
+  <header class="hero">
+    <div class="hero-text">
+      <p class="hero-tag">Merhaba, ben</p>
+      <h1>Layan Bassout</h1>
+      <p class="hero-sub">Yazılım Mühendisliği 4. sınıf öğrencisi</p>
+      <blockquote class="hero-quote">
+        <span class="quote-text">“Zekâ, değişime uyum sağlama yeteneğidir.”</span>
+        <cite>— Stephen Hawking</cite>
+      </blockquote>
+      <a href="#roadmap" class="hero-btn">Yolculuğuma göz at ↓</a>
+    </div>
+    <div class="hero-photo">
+      <img src="images/arge-foto.jpeg" alt="Layan Bassout" />
+    </div>
+  </header>
+
+  <!-- ROADMAP -->
+  <main id="roadmap" class="roadmap grid-view">
+    <div class="road-line"></div>
+
+    <!--
+      Her durak bir <article class="stop">.
+      Yeni deneyim eklemek için bir bloğu kopyala, yazıları ve foto yolunu değiştir.
+      Fotoğrafları "images" klasörüne koy.
+    -->
+
+    <!-- ÜNİVERSİTE -->
+    <article class="stop">
+      <div class="stop-dot">🎓</div>
+      <div class="stop-card">
+        <div class="stop-photo">
+          <img src="images/firat-uni.jpeg" alt="Fırat Üniversitesi giriş kapısı" style="object-position: center 35%;" />
+        </div>
+        <div class="stop-body">
+          <span class="stop-date">2023 – 2027</span>
+          <h2>Fırat Üniversitesi</h2>
+          <h3>Mühendislik Fakültesi · Yazılım Mühendisliği · 4. Sınıf</h3>
+          <p>Kod yazmayı derslerde öğrendim, üretmeyi ise hocalarımla birlikte imza attığım projelerde.</p>
+          <ul class="stop-tech">
+            <li>C</li><li>C++</li><li>Java</li><li>Python</li><li>PHP</li><li>SQL</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- TEKNOFEST / FIFTHWAVE -->
+    <article class="stop">
+      <div class="stop-dot">🚦</div>
+      <div class="stop-card">
+        <div class="stop-photo duo">
+          <img src="images/teknofest-fifthwave.jpg" alt="FifthWave takımı ve TEKNOFEST logosu" />
+          <img src="images/teknofest-puan.jpg" alt="Ön Tasarım Raporu hakem puanı: 91,33" class="contain" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Yarışma</span>
+            <span class="stop-date">2026</span>
+          </div>
+          <h2>TEKNOFEST 5G &amp; Yapay Zekâ ile Akıllı Yol Güvenliği</h2>
+          <h3>FifthWave Takımı · Bilgisayarlı Görü</h3>
+          <p>TEKNOFEST yolculuğumuzda yapay zekâ ve 5G’yi bir araya getirerek daha güvenli yollar için çalıştık. Videodan sürücü davranışlarını (telefon kullanımı, sigara, emniyet kemeri) tespit eden modülü YOLOv11 ile geliştirdim; veri toplama, temizleme ve artırma süreçlerini üstlendim.</p>
+          <ul class="stop-tech">
+            <li>Python</li><li>YOLOv11</li><li>Bilgisayarlı Görü</li><li>Veri Artırma</li><li>5G</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- PRODROM STAJI -->
+    <article class="stop">
+      <div class="stop-dot">🛡️</div>
+      <div class="stop-card">
+        <div class="stop-photo duo wide">
+          <img src="images/prodrom-teknokent.jpg" alt="Fırat Teknokent'te" />
+          <img src="images/prodrom-calisma.jpg" alt="Staj sırasında kod yazarken" />
+          <img src="images/prodrom-logo.png" alt="Prodrom ICT Solutions" class="photo-badge" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Staj</span>
+            <span class="stop-date">Temmuz – Ağustos 2026</span>
+          </div>
+          <h2><a href="https://www.prodrom.com/" target="_blank" rel="noopener">Prodrom ICT Solutions</a></h2>
+          <h3>Yapay Zekâ Stajyeri · Fırat Teknokent</h3>
+          <p>CVE güvenlik açığı kayıtlarını LLM ve RAG ile özetleyen, sınıflandıran ve önceliklendiren bir siber güvenlik asistanı geliştirdim. Ayrıca 5 uzman CrewAI ajanıyla çalışan fikir doğrulama platformu <strong>TSI – Test Your Idea</strong>’yı geliştirdim; paralel çalıştırmayla analiz süresini ~25 saniyeye indirdim, sonuçları Chart.js panoları ve otomatik PDF raporlarıyla sundum.</p>
+          <ul class="stop-tech">
+            <li>LLM</li><li>RAG</li><li>CrewAI</li><li>asyncio</li><li>Chart.js</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- APPBERRYSOFT STAJI -->
+    <article class="stop">
+      <div class="stop-dot">💼</div>
+      <div class="stop-card">
+        <div class="stop-photo">
+          <img src="images/appberrysoft.jpg" alt="AppBerrySoft ofis tabelası" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Staj</span>
+            <span class="stop-date">Temmuz – Ağustos 2025</span>
+          </div>
+          <h2>AppBerrySoft</h2>
+          <h3>Yazılım Mühendisliği Stajyeri · EV Charger Projesi</h3>
+          <p>Elektrikli araç şarj projesinde React, Node.js ve MongoDB ile hem ön yüz hem arka uç geliştirdim. Gerçek bir projede sorumluluk alarak kod optimizasyonu ve görev yönetimi üzerine pratik kazandım.</p>
+          <ul class="stop-tech">
+            <li>React</li><li>Node.js</li><li>MongoDB</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- TÜBİTAK 2209-A -->
+    <article class="stop">
+      <div class="stop-dot">🚀</div>
+      <div class="stop-card">
+        <div class="stop-photo">
+          <img src="images/tubitak.jpg" alt="Deprem Yardım Platformu projesi" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Proje</span>
+            <span class="stop-date">2025</span>
+          </div>
+          <h2>Yapay Zekâ Destekli Deprem Yardım Platformu</h2>
+          <h3>TÜBİTAK 2209-A · Proje Lideri</h3>
+          <p>Deprem sonrası yardım çalışmalarını koordine eden, yapay zekâ ve makine öğrenmesi tabanlı bir web platformu. Projeyi öneri aşamasından teslimata kadar yönettim.</p>
+          <ul class="stop-tech">
+            <li>React</li><li>MongoDB</li><li>Yapay Zekâ</li><li>Makine Öğrenmesi</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- GEN-U DEMO DAY -->
+    <article class="stop featured">
+      <div class="stop-dot">🏆</div>
+      <div class="stop-card">
+        <div class="stop-photo duo">
+          <img src="images/demoday-sahne.jpg" alt="Gen-U Demo Day sahnesinde" />
+          <img src="images/demoday-sunum.jpg" alt="Mindigo projesinin sunumu" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Finalist</span>
+            <span class="stop-date">Kasım 2024</span>
+          </div>
+          <h2>Genç Girişimciler Fikir Maratonu &amp; Gen-U Demo Day</h2>
+          <h3>Takım Kaptanı · Habitat Derneği &amp; UNICEF Türkiye</h3>
+          <p>Aylar süren eğitim ve çalışma serüveninin sonunda Mindigo projemizle 179 başvuru arasından ilk 17 takıma girdik. Ankara’da iki gün boyunca projemizi jüriye sunduk, mentorlarla birebir çalışarak fikrimizi geliştirdik.</p>
+          <ul class="stop-tech">
+            <li>Girişimcilik</li><li>Takım Kaptanlığı</li><li>Sunum</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- TAHWEEL -->
+    <article class="stop">
+      <div class="stop-dot">🤖</div>
+      <div class="stop-card">
+        <div class="stop-photo banner">
+          <img src="images/tahweel.jpg" alt="Tahweel AI Engineer – Layan Bassout" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">İş</span>
+            <span class="stop-date">Şubat – Eylül 2026</span>
+          </div>
+          <h2>Tahweel</h2>
+          <h3>Yapay Zekâ Mühendisi · Uzaktan</h3>
+          <p>Fintech hizmetlerine yapay zekâ özellikleri entegre ettim ve şirketin İngilizce/Arapça yapay zekâ asistanı “Tahweel Boy”un geliştirilmesine liderlik ettim; kural mimarisinden bilgi tabanına kadar uçtan uca sorumluluk aldım.</p>
+          <ul class="stop-tech">
+            <li>LLM</li><li>NLP</li><li>Prompt Mühendisliği</li><li>Konuşma Kuralları</li><li>İngilizce / Arapça</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- DİJİTAL VİZYON -->
+    <article class="stop">
+      <div class="stop-dot">🧠</div>
+      <div class="stop-card">
+        <div class="stop-photo duo">
+          <img src="images/dijital-vizyon-sertifika.jpg" alt="Dijital Vizyon katılım belgesi" />
+          <img src="images/dijital-vizyon-calisma.jpg" alt="Eğitimde model çalışması" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Eğitim</span>
+            <span class="stop-date">Mayıs – Haziran 2025</span>
+          </div>
+          <h2>Dijital Vizyon: Yapay Zekâ ve Dijital Dönüşüm</h2>
+          <h3>Fırat Üniversitesi YBS Topluluğu · ÜNİDES</h3>
+          <p>5 hafta, 40 saat: yapay zekâ temelleri, veri analitiği ve iş zekâsı, finans ve muhasebede yapay zekâ, dijital dönüşüm ve RPA. Program, uygulamalı bir hackathon ile tamamlandı.</p>
+          <ul class="stop-tech">
+            <li>Python</li><li>Veri Analitiği</li><li>İş Zekâsı</li><li>RPA</li><li>Hackathon</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- EMLAK KONUT IDEATHON -->
+    <article class="stop">
+      <div class="stop-dot">💡</div>
+      <div class="stop-card">
+        <div class="stop-photo duo wide">
+          <img src="images/ideathon-grup.jpg" alt="Emlak Konut Ideathon finalistleri" />
+          <img src="images/ideathon-trimind.jpg" alt="TriMind takım kartı" style="object-position: 75% center;" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Finalist</span>
+            <span class="stop-date">Nisan 2026</span>
+          </div>
+          <h2>PropTech &amp; İleri Veri Analitiği Ideathonu</h2>
+          <h3>TriMind Takımı · Emlak Konut GYO, Ankara</h3>
+          <p>Gayrimenkulde yapay zekâ destekli çözümler üzerine 12 saatlik yoğun bir maraton. Ankara finalinde projemizi jüriye sunduk ve bir fikrin gerçek kullanıcıyla test edilmeden tamamlanmadığını öğrendik.</p>
+          <ul class="stop-tech">
+            <li>Yapay Zekâ</li><li>PropTech</li><li>Veri Analitiği</li><li>Girişimcilik</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- UNV GÖNÜLLÜLÜĞÜ -->
+    <article class="stop">
+      <div class="stop-dot">🌍</div>
+      <div class="stop-card">
+        <div class="stop-photo logo">
+          <img src="images/unv-logo.png" alt="UN Volunteers" />
+        </div>
+        <div class="stop-body">
+          <div class="stop-meta">
+            <span class="stop-tag">Gönüllü</span>
+            <span class="stop-date">Halen</span>
+          </div>
+          <h2>Birleşmiş Milletler Gönüllüleri (UNV)</h2>
+          <h3>Online Gönüllü</h3>
+          <p>UNV programında gönüllü olarak yer alıyorum; yapay zekâ ve teknoloji alanındaki bilgimi sosyal etki yaratan projelere katmayı hedefliyorum.</p>
+          <ul class="stop-tech">
+            <li>Gönüllülük</li><li>Sosyal Etki</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- YOLUN SONU -->
+    <div class="road-end">
+      <div class="stop-dot">🏁</div>
+      <p>Yolculuk devam ediyor…</p>
+    </div>
+  </main>
+
+  <!-- PROJELER -->
+  <section class="section">
+    <h2 class="section-title">Okul Projeleri</h2>
+    <div class="project-grid">
+      <article class="project-card featured-project">
+        <span class="project-type">Okul Projesi</span>
+        <h3>Kripto Para Fiyat Tahmin Platformu</h3>
+        <p>XGBoost, LightGBM ve Random Forest topluluk (ensemble) modellerinin tahmin sonuçlarını görselleştiren bir web platformu. Backend’i FastAPI, arayüzü React ve TypeScript ile geliştirdim.</p>
+        <ul class="stop-tech">
+          <li>Python</li><li>XGBoost</li><li>LightGBM</li><li>Random Forest</li><li>FastAPI</li><li>React</li><li>TypeScript</li>
+        </ul>
+      </article>
+      <article class="project-card">
+        <span class="project-type">Okul Projesi</span>
+        <h3>Elektrikli Araç Şarj Yönetim Sistemi</h3>
+        <ul class="stop-tech"><li>React</li></ul>
+      </article>
+      <article class="project-card">
+        <span class="project-type">Okul Projesi</span>
+        <h3>Kütüphane Yönetim Sistemi</h3>
+        <p>Nesne yönelimli programlama (OOP) ile geliştirilmiş kütüphane yönetim sistemi.</p>
+        <ul class="stop-tech"><li>Java</li><li>OOP</li></ul>
+        <a class="cert-link" href="https://github.com/leya1133/java-library-system" target="_blank" rel="noopener">Kodu gör →</a>
+      </article>
+      <article class="project-card">
+        <span class="project-type">Okul Projesi</span>
+        <h3>Akıllı Erişim Sistemi</h3>
+        <ul class="stop-tech"><li>Java</li></ul>
+      </article>
+      <article class="project-card">
+        <span class="project-type">Okul Projesi</span>
+        <h3>Okul Giriş Sistemi</h3>
+        <ul class="stop-tech"><li>HTML</li><li>CSS</li><li>PHP</li><li>SQL</li></ul>
+        <a class="cert-link" href="https://github.com/leya1133/school-entrance-system" target="_blank" rel="noopener">Kodu gör →</a>
+      </article>
+    </div>
+    <a class="github-link" href="https://github.com/leya1133" target="_blank" rel="noopener">Tüm projeler GitHub’da →</a>
+  </section>
+
+  <!-- DİLLER -->
+  <section class="section">
+    <h2 class="section-title">Diller</h2>
+    <div class="lang-grid">
+      <div class="lang-card">
+        <div class="lang-head"><h3>Arapça</h3><span class="lang-level">Ana dil</span></div>
+        <div class="lang-bar" data-level="7"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="lang-card">
+        <div class="lang-head"><h3>Türkçe</h3><span class="lang-level">C2 · İleri</span></div>
+        <div class="lang-bar" data-level="6"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="lang-card">
+        <div class="lang-head"><h3>İngilizce</h3><span class="lang-level">B2 · Orta-üstü</span></div>
+        <div class="lang-bar" data-level="4"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERTİFİKALAR -->
+  <section class="section">
+    <h2 class="section-title">Sertifikalar</h2>
+    <div class="cert-grid">
+      <article class="cert-card">
+        <span class="cert-year">2025 – 2026</span>
+        <h3>Veri Analizi Okulu</h3>
+        <p class="cert-detail">“Yapay Zekâ ve Makine Öğrenmesi” modülü</p>
+        <p class="cert-issuer">YÖK · ODTÜ · İTÜ · Boğaziçi Üniversitesi</p>
+      </article>
+      <article class="cert-card">
+        <span class="cert-year">2026</span>
+        <h3>Start Writing Prompts like a Pro</h3>
+        <p class="cert-issuer">Google · Coursera</p>
+      </article>
+      <article class="cert-card">
+        <span class="cert-year">Ocak 2026</span>
+        <h3>Proje Yazım Eğitimi</h3>
+        <p class="cert-detail">Fikir üretme, geliştirme ve proje yazım araçları</p>
+        <p class="cert-issuer">Öğrenci Kariyeri</p>
+        <a class="cert-link" href="images/sertifika-proje-yazim.jpg" target="_blank" rel="noopener">Belgeyi gör →</a>
+      </article>
+      <article class="cert-card">
+        <span class="cert-year">2025</span>
+        <h3>Python for Data Science and AI</h3>
+        <p class="cert-issuer">IBM · Coursera</p>
+      </article>
+      <article class="cert-card">
+        <span class="cert-year">2025</span>
+        <h3>Python Programlama Dili</h3>
+        <p class="cert-issuer">BTK Akademi</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <footer class="contact">
+    <h2>İletişim</h2>
+    <p class="contact-sub">Bir proje, fırsat ya da sadece merhaba için bana ulaşabilirsin.</p>
+    <div class="contact-links">
+      <a href="mailto:besudleyyen@gmail.com">✉️ besudleyyen@gmail.com</a>
+      <a href="tel:+905226141309">📞 +90 522 614 13 09</a>
+      <a href="https://www.linkedin.com/in/layan-bassout-6055172a5/" target="_blank" rel="noopener">in LinkedIn</a>
+      <a href="https://github.com/leya1133" target="_blank" rel="noopener">⌨️ GitHub</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
