@@ -81,7 +81,6 @@ const I18N = {
     "c5.title": "Python Programming Language",
     "outro.kicker": "Last word",
     "outro.title": "Just say<br/><em>hello.</em>",
-    "outro.classic": "Back to the classic design →",
   },
 
 };
